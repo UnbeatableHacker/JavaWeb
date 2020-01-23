@@ -1,0 +1,18 @@
+一、JDBCUtil
+	封装sql操作（增删改查）
+	executeQuery（）	查询
+	executeUpdate（） 增删改
+
+	1.查询返回List集合
+	public static <T> list<T> getList(Class<T> cls, String sql, Object... obj);
+	2.增、删、改
+	public static boolean getDML(String sql, Object... obj);
+	3.查询返回单个对象
+	public static <T> T getOneObject(Class<T> cls, String sql, Object... obj) 
+	4.查询总记录数
+	public static Integer getCount(String sql, Object.. obj);
+	
+二、PageUtil
+	开始下标 = （当前页 - 1）* 开始下标
+	总页数 = 总记录数 % 每页条数 ==0 ？总记录数/每页条数 : 总记录数/每页条数+1 
+	

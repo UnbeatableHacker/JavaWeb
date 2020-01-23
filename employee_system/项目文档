@@ -1,0 +1,87 @@
+web阶段综合案例——员工管理系统
+
+一、原型页面
+	--登录页面：longin.jsp
+		用户名：【】
+		密    码：【】
+		【登录】 【注册】
+	--注册页面：register.jsp
+		用户名：【】
+		密    码：【】
+		邮    箱：【】
+		性    别：【】
+		【注册】【登录】
+	--员工列表页面：emp_list.jsp
+		姓名：【    】 部门：【】 搜索
+		【添加】	【批量删除】	
+		编号 | 员工姓名 | 性别 | 员工职位 | 入职时间 | 薪水 | 上级领导 | 部门 | 爱好
+					
+					【首页】【上一页】1，2，3，...【下一页】【尾页】
+	--员工添加页面：emp_add.jsp
+		员工信息：【   】
+		员工性别：男 o 女o
+		员工职位：【   】
+		员工薪水：【   】
+		上级领导：【   】
+		所属部门：【   】
+		员工爱好：【   】
+		【添加】 【返回】
+	--信息修改页面：emp_update.jsp
+		员工信息：【   】
+		员工性别：男 o 女o
+		员工职位：【   】
+		员工薪水：【   】
+		上级领导：【   】
+		所属部门：【   】
+		员工爱好：【   】
+		【修改】 【返回】
+
+二、数据库设计
+	--用户表：user
+		uid：		用户编号（主键）
+		username：	用户名
+		password：	登录密码
+		usersex：	用户性别
+		Email：用户邮箱
+	--员工表：employee
+		empno：		员工编号（主键）
+		empname：	员工姓名
+		sex：		性别
+		job：		员工职位
+		hiredate：	入职时间
+		salary：		薪水
+		sid：		上级领导
+		deptno:		所属部门（外键）
+		hobby：		爱好
+	--部门表：department
+		deptno：		部门编号（主键）
+		deptname：	部门名称
+
+三、项目分析
+	--使用技术：
+		jdbc
+		Servlet
+		jsp
+		jstl
+		过滤器
+		监听器
+		Session
+		Cookie
+		反射
+		[js、css]
+	--规划包：
+		com.sxz.
+			servlet		控制层：负责请求接受与相应
+			service		业务层：处理所有的业务逻辑
+			dao			持久层：负责与数据库交互
+			utils		工具类：简化开发，提高开发效率
+			filters		过滤器：负责处理请回与相应编码
+			listeners	监听器：负责实现系统在线人数统计
+		com.sxz.
+	--所需jar包
+		servlet-api.jar:							servlet依赖包
+		jstl.jar + standard.jar						JSTL标签依赖包
+		mysql-connector-java.jar					数据库驱动包
+		commons-beautils.jar + commons-beautils.jar	工具包 + 相关日志包
+		
+		
