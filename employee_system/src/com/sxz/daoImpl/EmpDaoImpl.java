@@ -82,7 +82,7 @@ public class EmpDaoImpl implements EmpDao {
 
     @Override
     public boolean updateEmp(Employee emp) {
-        String sql = "update employee set empname=?,empsex=?,job=?,hiredate=?,salary=?,sid=?,deptno=?,hobby=?) where empno=?";
+        String sql = "update employee set empname=?,empsex=?,job=?,hiredate=?,salary=?,sid=?,deptno=?,hobby=? where empno=?";
         boolean dml = JDBCUtil.getDML(sql, emp.getEmpname(), emp.getEmpsex(), emp.getJob(), emp.getHiredate(),
                 emp.getSalary(), emp.getSid(), emp.getDeptno(), emp.getHobby(), emp.getEmpno());
         return dml;
