@@ -1,0 +1,70 @@
+Nweb综合案例——图书管理系统（自己写的）
+
+一、原页面
+
+二、数据库设计
+	--图书表：book
+		bookId		书号
+		bookName	书名
+		price		价格
+		author		作者
+		publisher	出版社
+		publitionDate	出版时间
+		totalNumber	总数量
+		borrowedNum	被借数量
+		
+	--学生表：student
+		stuId		学号
+		stuName		姓名
+		sex			性别
+		college		学院
+		class		班级
+		admissionTime	入学时间
+		
+	--教师表：teacher
+		teacherId		工号
+		teacherName		姓名
+		sex			性别
+		college		学院
+		admissionTime	入职时间
+		
+	--管理员表：administrator
+		admId		工号
+		admName		姓名
+		password	密码
+		
+	
+	--用户表：user
+		userId		用户编号
+		userName	姓名
+		password	密码
+		college		学院
+		sex			性别
+		borrowNum	借阅数量
+		borrowingNum 正借阅数量
+		
+	--借阅表：borrowing
+		bId			借阅编号
+		userId		用户编号
+		bookId		书号
+
+三、项目分析
+	--使用技术
+		jdbc
+		Servlet
+		jsp
+		jstl
+		过滤器
+		监听器
+		Session
+		Cookie
+		反射
+		[js、css]
+	--规划包：
+		com.sxz.
+			servlet		控制层：负责请求接受与相应
+			service		业务层：处理所有的业务逻辑
+			dao			持久层：负责与数据库交互
+			utils		工具类：简化开发，提高开发效率
+			filters		过滤器：负责处理请回与相应编码
+			listeners	监听器：负责实现系统在线人数统计
