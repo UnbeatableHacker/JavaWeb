@@ -9,7 +9,7 @@
 </head>
 <body>
 	<c:choose>
-		<c:when test="${user ! empty }">
+		<c:when test="${! empty user}">
 			你好，${user.username }，<a href="logout.do">退出</a>
 		</c:when>
 		<c:otherwise>
